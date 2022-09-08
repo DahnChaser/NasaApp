@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_nav"
+    app:startDestination="@id/galaxyListFragment">
+
+    <fragment
+        android:id="@+id/galaxyListFragment"
+        android:name="com.dev.nasa_app.fragments.GalaxyListFragment"
+        android:label="fragment_galaxy_list"
+        tools:layout="@layout/fragment_galaxy_list" >
+        <action
+            android:id="@+id/action_galaxyListFragment_to_selectedGalaxyFragment"
+            app:destination="@id/selectedGalaxyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectedGalaxyFragment"
+        android:name="com.dev.nasa_app.fragments.SelectedGalaxyFragment"
+        android:label="fragment_selected_galaxy"
+        tools:layout="@layout/fragment_selected_galaxy" />
+</navigation>

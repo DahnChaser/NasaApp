@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name" translatable="false">NASA App</string>
+    <string name="center_date_splitter">%1$s | %2$s</string>
+    <string name="center">Center:</string>
+    <string name="date_created">Date Created:</string>
+
+</resources>
