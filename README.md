@@ -8,7 +8,7 @@ This project allows users to scroll through the list of Milky Way images taken i
 * Glide - a fast and efficient open source media management and image loading framework for Android that wraps media decoding, memory and disk caching, and resource pooling into a simple and easy to use interface.
 * Retrofit - A type-safe HTTP client for Android and Java developed by square
 * GSON - Java/Kotlin library that can be used to convert Java/Kotlin Objects into their JSON representation. It can also be used to convert a JSON string to an equivalent Java/Kotlin object.
-
+* Shimmerview - by facebook for recyclerview loading indicator
 Architecture
 - Uses Kotlin
 - The app uses google navigation graph to effectively handle navigations within the app
