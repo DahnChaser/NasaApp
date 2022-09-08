@@ -38,6 +38,7 @@ class GalaxyListFragment : Fragment(),OnItemClickListener {
     {
         binding = FragmentGalaxyListBinding.inflate(inflater,container,false);
         galaxyViewModel = ViewModelProvider(requireActivity())[VModel::class.java]
+        binding.shimmerViewContainer.duration = 800
 
         initData()
 
@@ -53,6 +54,17 @@ class GalaxyListFragment : Fragment(),OnItemClickListener {
         mGalaxyListAdapter.notifyDataSetChanged()
 
     }
+
+    override fun onResume() {
+        super.onResume()
+        binding.shimmerViewContainer.startShimmerAnimation()
+    }
+
+    override fun onPause() {
+        binding.shimmerViewContainer.stopShimmerAnimation()
+        super.onPause()
+    }
+
 
     private fun initData() {
 
@@ -101,12 +113,15 @@ class GalaxyListFragment : Fragment(),OnItemClickListener {
     {
         if(isLoading)
         {
-            binding.loadingAnimator.visibility = View.VISIBLE
-
+           // binding.loadingAnimator.visibility = View.VISIBLE
+            binding.shimmerViewContainer.startShimmerAnimation();
+            binding.shimmerViewContainer.setVisibility(View.VISIBLE);
         }
         else
         {
-            binding.loadingAnimator.visibility = View.GONE
+          //  binding.loadingAnimator.visibility = View.GONE
+            binding.shimmerViewContainer.stopShimmerAnimation();
+            binding.shimmerViewContainer.visibility = View.GONE;
 
         }
     }

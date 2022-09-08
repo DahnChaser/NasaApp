@@ -10,7 +10,7 @@ import retrofit2.HttpException
 import java.io.IOException
 import java.net.UnknownHostException
 
-class GroupRepository(val scope: CoroutineScope) {
+class GalaxyListRepository(val scope: CoroutineScope) {
 
     var myApiResponse: MutableLiveData<MyApiResponse> = MutableLiveData<MyApiResponse>()
     var myError = MyError()
@@ -68,7 +68,7 @@ class GroupRepository(val scope: CoroutineScope) {
                 myApiResponse.postValue(
                     MyApiResponse(
                         400,
-                        "getGalaxyList",
+                        CONST_GETGALAXYREQ,
                         message
                     )
                 )

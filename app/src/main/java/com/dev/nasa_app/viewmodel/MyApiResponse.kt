@@ -11,7 +11,6 @@ class MyApiResponse(
 }
 
 class MyError(){
-    val code: Int = 400
     var message:String = ""
     var error:String = ""
 
